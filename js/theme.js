@@ -3,14 +3,40 @@
 (function($) {
     "use strict"; // Start of use strict
 
-    // jQuery for page scrolling feature - requires jQuery Easing plugin
-    $('.page-scroll a').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: ($($anchor.attr('href')).offset().top - 50)
-        }, 1250, 'easeInOutExpo');
+    var previousHash = '';
+
+    $('.page-scroll a').on('click', function(event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== '' && this.hash !== '#contacts') {
+            event.preventDefault();
+
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).first().offset().top
+            }, 1250, function(){
+                window.location.hash = hash;
+            });
+
+            console.log(previousHash);
+            if (previousHash !== ''){
+                $('li + .page-scroll a[href="' + previousHash + '"]').css('background-color', '#313647');
+                // $('.page-scroll a[href="' + previousHash + '"]').parent().removeClass('active');
+                $('li + .page-scroll a[href="' + hash + '"]').css('background-color', 'red');
+            }
+
+            previousHash = hash;
+        }
+    });
+
+    $('.page-scroll a[href="#contacts"]').on('click', function(event) {
         event.preventDefault();
-        console.log($anchor.attr('href'));
+
+        $('html, body').animate({
+            scrollTop: $('body').height()
+        }, 1250, '');
+
+        $('.page-scroll a').css('background-color', '#313647');
+
     });
 
     // Highlight the top nav as scrolling occurs
