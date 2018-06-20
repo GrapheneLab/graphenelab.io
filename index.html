@@ -2,200 +2,874 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Graphene Lab - создания продуктов нового поколения в сфере блокчейн">
-    <meta name="Keywords" content="graphene, blockchain, bitshares, блокчейн, графен, разработка блокчейна, приложения на блокчейне, финансы, банкинг, цифровая экономика">
-
-	<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
-	<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
-
-    <title>Graphene Lab - создания продуктов нового поколения в сфере блокчейн</title>
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/theme.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic" rel="stylesheet"> 
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Graphene Lab</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="libs/MDB/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="libs/owl/assets/owl.carousel.min.css">
+    <link href="libs/MDB/css/mdb.min.css" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet">
 </head>
 
-<body id="page-top" class="index">
-<div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+<body>
+<nav class="navbar fixed-top gl__navbar">
+    <a href="#" class="gl__logo-wrapper"><img src="img/graphene.png" alt="" class="gl__logo"></a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link js-link-anchor" href="#intro">Услуги</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link js-link-anchor" href="#advantages-blckchn">Преимущества</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link js-link-anchor" href="#tech">Технологии</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link js-link-anchor" href="#team">Команда</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link js-link-anchor" href="#portfolio">Портфолио</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link js-link-anchor" href="#contacts">Контакты</a>
+        </li>
+    </ul>
+</nav>
 
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> ☰ <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="#page-top"><img class="img-responsive" src="img/logo_min.png" alt=""></a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#page-top">О компании</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#services">Услуги</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#graphene">Технология</a>
-                    </li>
-                     <li class="page-scroll">
-                        <a href="#contacts">Контакты</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<section id="intro" class="gl__intro">
+    <video class="intro__video-bg" playsinline autoplay muted loop>
+        <source src="img/intro.mp4" type="video/mp4"/>
+        <source src="img/intro.ogv" type="video/ogv"/>
+        Your browser does not support the video tag.
+    </video>
 
-    <header>
-        <div class="container" id="maincontent" tabindex="-1">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive wow zoomIn" src="img/logo.png" alt="" data-wow-duration="1.5s" data-wow-delay="0.0s">
-                    <div class="intro-text">
-                        <span class="skills wow fadeIn" data-wow-duration="1.5s" data-wow-delay="1.0s">Наша цель &ndash; объединить профессионалов <br>для создания инновационных продуктов <br>с применением технологии <span class="red">блокчейн</span></span>
+    <!--<img src="img/intro.gif" alt="" class="intro__video-bg">-->
+
+    <div id="intro-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#intro-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#intro-carousel" data-slide-to="1"></li>
+        </ol>
+
+        <div class="carousel-inner" role="listbox">
+
+            <div class="carousel-item active">
+                <div class="carousel-caption gl__slider-inner">
+                    <div class="container animated fadeInDown">
+                        <div class="rov jusctify-content-start">
+                            <div class="col col-lg-7 align-self-center">
+                                <p class="gl__slide-item"><strong>Graphene Lab</strong> – команда опытных блокчейн-программистов, разрабатывающих платформы на базе технологии Graphene.</p>
+                                <p class="gl__slide-item">Среди реализованных ими проектов Karma (karma.red), Xzen (xzen.io), Cryptocean (cryptocean.io), Aurum (скоро) и другие.</p>
+                                <p class="gl__slide-item">Общее число членов команды – 11 человек, из которых 8 – высококвалифицированные разработчики.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="carousel-caption gl__slider-inner">
+                    <div class="container animated fadeInDown">
+                        <div class="rov jusctify-content-start">
+                            <div class="col col-lg-7 align-self-center">
+                                <h4 class="gl__heading--sm">Наша деятельность</h4>
+                                <ul class="gl__slide-list">
+                                    <li class="gl__slide-desc">Разработка и интеграция блокчейн-приложений; Запуск блокчейна
+                                        “под ключ”
+                                    </li>
+                                    <li class="gl__slide-desc">Разработка бизнес-решений с применением блокчейн-технологии
+                                    </li>
+                                    <li class="gl__slide-desc">Разработка смарт-контрактов на EOS</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
 
-
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Наша деятельность</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            <div class="row services-item-container">
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 services-item">
-                    <img src="img/icon_1.png" class="services-icon wow flipInY">
-                    <p class="services-icon-text">Консалтинг в сфере блокчейн (Graphene)</p>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 services-item">
-                    <img src="img/icon_2.png" class="services-icon wow flipInY">
-                    <p class="services-icon-text">Разработка и интеграция блокчейн-приложений</p>
-                </div>   
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 services-item">
-                    <img src="img/icon_3.png" class="services-icon wow flipInY">
-                    <p class="services-icon-text">Запуск блокчейна &laquo;под ключ&raquo;</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-<!--
-    <section class="success" id="graphene">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Graphene</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row" >
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 graphene-item  wow zoomIn">
-                    <h3 class="graphene-head">Производительность</h3>
-                    <p class="graphene-text">100 000 TPS <span>(Bitcoin 7 TPS, Etherium 25 TPS)</span></p>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 graphene-item  wow zoomIn">
-                    <h3 class="graphene-head">Скорость подтверждений</h3>
-                    <p class="graphene-text">1-3 сек <span>(Bitcoin 10-12 мин, Etherium ???)</span></p>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 graphene-item  wow zoomIn">
-                    <h3 class="graphene-head">Масштабируемость</h3>
-                    <p class="graphene-text">Консенсус DPoS<span><br></span></p>
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-md-offset-2 col-lg-offset-2 graphene-item  wow zoomIn">
-                    <h3 class="graphene-head">Гибкость</h3>
-                    <p class="graphene-text">Иерархическая мульти-подпись</p>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 graphene-item  wow zoomIn">
-                    <h3 class="graphene-head">Доступность</h3>
-                    <p class="graphene-text">Низкие комиссии с возможностью отмены</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
-
-
-    <section class="success" id="graphene">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Технология</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row" >
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 graphene-item  wow zoomIn">
-                    <h3 class="graphene-head">Производительность и пропускная способность</h3>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 graphene-item  wow zoomIn">
-                    <h3 class="graphene-head">Удобство и доступность</h3>
-                </div>   
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 graphene-item  wow zoomIn">
-                    <h3 class="graphene-head">Масштабируемость</h3>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 graphene-item  wow zoomIn">
-                    <h3 class="graphene-head">Гибкость</h3>
-                </div>   
-            </div>
-        </div>
-    </section>
-
-    <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                	<div class="col-xs-12 col-sm-0 col-md-4 col-lg-4">
-
-                	</div>
-                	<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-		                <a href="https://t.me/graphenelab"  class="si"><img src="img/icon_4.png"></a>
-		                <a href="https://www.facebook.com/graphenelabrus/"  class="si"><img src="img/icon_5.png"></a>
-		                <br><br>
-		                <a href="mailto:info@graphenelab.org" class="si">info@graphenelab.org</a>
-                        <div class="number">+7 (812) 925-55-75</div>
-	               </div>
-	               <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4"><br><br><br>
-						<p class="copyr">© Graphene Lab 2017. All Rights Reserved</p>
-	               </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
+        <a class="carousel-control-prev" href="#intro-carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#intro-carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
         </a>
     </div>
+</section>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script>new WOW().init();</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/theme.js"></script>
+<section id="advantages-blckchn" class="gl__advantages">
+    <div class="container">
+        <h2 class="gl__heading">Преимущества технологии блокчейн</h2>
+        <div class="row gl__advantages-wrapper">
+            <div class="col col-sm-6 gl__advantages-item">
+                <div class="card gl__card--advantage">
+                    <div class="hexagon__wrapper">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="104" height="120"
+                             viewbox="0 0 103.92304845413263 120" class="hexagon">
+                            <path class="hexagon__path"
+                                  d="M46.76537180435968 2.9999999999999996Q51.96152422706631 0 57.157676649772945 3L98.726896031426 27Q103.92304845413263 30 103.92304845413263 36L103.92304845413263 84Q103.92304845413263 90 98.726896031426 93L57.157676649772945 117Q51.96152422706631 120 46.76537180435968 117L5.196152422706632 93Q0 90 0 84L0 36Q0 30 5.196152422706632 27Z"></path>
+                        </svg>
+                        <img src="img/decentralized.svg" alt="" class="hexagon__ico">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Децентрализация</h3>
+                        <p class="card-text">Данные хранятся не централизованно, а распределяются по множеству узлов</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-sm-6 gl__advantages-item">
+                <div class="card gl__card--advantage">
+                    <div class="hexagon__wrapper">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="104" height="120"
+                             viewbox="0 0 103.92304845413263 120" class="hexagon">
+                            <path class="hexagon__path"
+                                  d="M46.76537180435968 2.9999999999999996Q51.96152422706631 0 57.157676649772945 3L98.726896031426 27Q103.92304845413263 30 103.92304845413263 36L103.92304845413263 84Q103.92304845413263 90 98.726896031426 93L57.157676649772945 117Q51.96152422706631 120 46.76537180435968 117L5.196152422706632 93Q0 90 0 84L0 36Q0 30 5.196152422706632 27Z"></path>
+                        </svg>
+                        <img src="img/safebox.svg" alt="" class="hexagon__ico">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Безопасность</h3>
+                        <p class="card-text">Для взлома требуется изменить все существующие копии. Для защиты от
+                            фальсификации используется шифрование и цифровая подпись</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-sm-6 gl__advantages-item">
+                <div class="card gl__card--advantage">
+                    <div class="hexagon__wrapper">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="104" height="120"
+                             viewbox="0 0 103.92304845413263 120" class="hexagon">
+                            <path class="hexagon__path"
+                                  d="M46.76537180435968 2.9999999999999996Q51.96152422706631 0 57.157676649772945 3L98.726896031426 27Q103.92304845413263 30 103.92304845413263 36L103.92304845413263 84Q103.92304845413263 90 98.726896031426 93L57.157676649772945 117Q51.96152422706631 120 46.76537180435968 117L5.196152422706632 93Q0 90 0 84L0 36Q0 30 5.196152422706632 27Z"></path>
+                        </svg>
+                        <img src="img/transparency.svg" alt="" class="hexagon__ico">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Прозрачность</h3>
+                        <p class="card-text">Все данные находятся в публичном доступе (кроме приватных блокчейнов).
+                            Каждый может проверить кошелек или транзакцию</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-sm-6 gl__advantages-item">
+                <div class="card gl__card--advantage">
+                    <div class="hexagon__wrapper">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="104" height="120"
+                             viewbox="0 0 103.92304845413263 120" class="hexagon">
+                            <path class="hexagon__path"
+                                  d="M46.76537180435968 2.9999999999999996Q51.96152422706631 0 57.157676649772945 3L98.726896031426 27Q103.92304845413263 30 103.92304845413263 36L103.92304845413263 84Q103.92304845413263 90 98.726896031426 93L57.157676649772945 117Q51.96152422706631 120 46.76537180435968 117L5.196152422706632 93Q0 90 0 84L0 36Q0 30 5.196152422706632 27Z"></path>
+                        </svg>
+                        <img src="img/copyright.svg" alt="" class="hexagon__ico">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Подлинность</h3>
+                        <p class="card-text">Блокчейн позволяет убрать посредников. Подлинность действий проверяют сами
+                            участники сети</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="advantages-graphene" class="gl__advantages">
+    <div class="container">
+        <h2 class="gl__heading">Преимущества Graphene</h2>
+        <div class="row justify-content-center owl-carousel">
+            <div class="col">
+                <div class="card gl__card--advantage">
+                    <h3 class="card-header"><img src="img/shield.svg" alt=""></h3>
+                    <div class="card-body">
+                        <h4 class="card-title gl__heading--sm">Один из наиболее безопасных блокчейнов</h4>
+                        <p class="card-text text--md">согласно отчету Blockchain Security by China CERT</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card gl__card--advantage">
+                    <h3 class="card-header"><img src="img/geometry.svg" alt=""></h3>
+                    <div class="card-body">
+                        <h4 class="card-title gl__heading--sm">Высокая пропускная способность и масштабируемость</h4>
+                        <p class="card-text text--md">до 100 000 тр. в сек., Ethereum – 25, Waves – 17, Bitcoin – 7</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card gl__card--advantage">
+                    <h3 class="card-header"><img src="img/contract.svg" alt=""></h3>
+                    <div class="card-body">
+                        <h4 class="card-title gl__heading--sm">Поддержка смарт контрактов</h4>
+                        <p class="card-text text--md">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card gl__card--advantage">
+                    <h3 class="card-header"><img src="img/innovation.svg" alt=""></h3>
+                    <div class="card-body">
+                        <h4 class="card-title gl__heading--sm">Гибкость технологии</h4>
+                        <p class="card-text text--md">широкие возможности для применения в разных сферах</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card gl__card--advantage">
+                    <h3 class="card-header"><img src="img/solar-panel.svg" alt=""></h3>
+                    <div class="card-body">
+                        <h4 class="card-title gl__heading--sm">Экологичность </h4>
+                        <p class="card-text text--md">алгоритм консенсуса DPoS имеет более низкие потребности в ресурсах для
+                            обеспечения функционирования сети</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card gl__card--advantage">
+                    <h3 class="card-header"><img src="img/key.svg" alt=""></h3>
+                    <div class="card-body">
+                        <h4 class="card-title gl__heading--sm">Динамическая настройка прав доступа</h4>
+                        <p class="card-text text--md">гибкое управление корпоративной средой</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card gl__card--advantage">
+                    <h3 class="card-header"><img src="img/login.svg" alt=""></h3>
+                    <div class="card-body">
+                        <h4 class="card-title gl__heading--sm">Привычные имена аккаунтов</h4>
+                        <p class="card-text text--md">вида @username (легкие и безопасные транзакции)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="tech" class="gl__tech">
+    <div class="container">
+        <h2 class="gl__heading">Используемые технологии</h2>
+        <div class="row justify-content-center tech__wrapper">
+            <img src="img/assembler_logo.png" class="tech__ico" alt="">
+            <img src="img/cpp_logo.png" class="tech__ico" alt="">
+            <img src="img/ObjC_logo.png" class="tech__ico" alt="">
+        </div>
+        <div class="row justify-content-center tech__wrapper">
+            <img src="img/es6_logo.svg" class="tech__ico" alt="">
+            <img src="img/html_logo.png" class="tech__ico" alt="">
+            <img src="img/css_logo.png" class="tech__ico" alt="">
+        </div>
+        <div class="row justify-content-center tech__wrapper">
+            <img src="img/angular_logo.svg" class="tech__ico" alt="">
+            <img src="img/react_logo.png" class="tech__ico" alt="">
+            <img src="img/redux_logo.png" class="tech__ico" alt="">
+        </div>
+    </div>
+</section>
+
+<section id="team" class="gl__team">
+    <div class="container">
+        <h2 class="gl__heading">Наша команда</h2>
+        <svg class="clip-svg">
+            <defs>
+                <clipPath id="polygon-clip-hexagon" clipPathUnits="objectBoundingBox">
+                    <polygon class="hexagon-mask" points="0 0.5, 0.25 0.95, 0.75 0.95, 1 0.5, 0.75 0.05, 0.25 0.05"/>
+                </clipPath>
+            </defs>
+        </svg>
+
+        <div class="gl__team-item">
+            <div class="avatar__wrapper"><img src="img/den.png" alt="" class="avatar" /></div>
+            <div class="desc">
+                <p class="name text--lg">Денис Бредихин <span class="position">Big Boss</span></p>
+                <p class="info text--md">Свой первый биткоин он не купил в 2010 году. Первый эфир продал по 8 долларов. Битшару купил летом 2017 года по 40 центов на всю котлету. В остальном он вполне толковый парень - высшее по маркетингу, больше 6 лет в стратегическом консалтинге и около 4 лет управления проектами. Начал изучать Objective-C для разработки приложений на iOS</p>
+            </div>
+        </div>
+
+        <div class="gl__team-item">
+            <div class="avatar__wrapper"><img src="img/igor.png" alt="" class="avatar" /></div>
+            <div class="desc">
+                <p class="name text--lg">Игорь Романов <span class="position">Технический директор/основной блокчейн-разработчик</span></p>
+                <p class="info text--md">Технический директор/основной блокчейн-разработчик. Разрабатывает программное обеспечение для систем космической сложности – авиации, финансового сектора (в том числе банкинг и блокчейн-платформу для системы p2p-кредитования Karma), оборонной промышленности и других. Проекты: Karma, Xzen и другие
+                </p>
+            </div>
+        </div>
+
+        <div class="gl__team-item">
+            <div class="avatar__wrapper"><img src="img/olga.png" alt="" class="avatar" /></div>
+            <div class="desc">
+                <p class="name text--lg">Ольга Паченкова<span class="position">Блокчейн-разработчик</span></p>
+                <p class="info text--md">Более десяти лет работы на C++ в области разработки программно-аппаратных комплексов защиты информации для оборонной промышленности. Проекты: Karma и другие, классифицированные как секретные. :)</p>
+            </div>
+        </div>
+        <div class="gl__team-item">
+            <div class="avatar__wrapper"><img src="img/Alex.png" alt="" class="avatar" /></div>
+            <div class="desc">
+                <p class="name text--lg">Алексей Бубликов<span class="position">Бэкенд разработчик</span></p>
+                <p class="info text--md">Более трех лет работы в таких сферах как телекоммуникации, программно-аппаратные комплексы защиты информации для нужд гособороны. Разработка проектов на основе технологии MoCap. Проекты: SkyCapture и другие, классифицированные как секретные.
+                </p>
+            </div>
+        </div>
+        <div class="gl__team-item">
+            <div class="avatar__wrapper"><img src="img/Roman.png" alt="" class="avatar" /></div>
+            <div class="desc">
+                <p class="name text--lg">Роман Дагаев <span class="position">Фронтэнд разработчик</span></p>
+                <p class="info text--md">Разработчик пользовательских интерфейсов, также интересующийся прототипированием и разработкой UX/UI. Ярый фанат удобных и красивых интерфейсов. Проекты: Karma, Cryptocean, "Школьный Олимп", LogoCatalogo, Vinil-Pressing-Plants
+                </p>
+            </div>
+        </div>
+        <div class="gl__team-item">
+            <div class="avatar__wrapper"><img src="img/kate.png" alt="" class="avatar" /></div>
+            <div class="desc">
+                <p class="name text--lg">Екатерина Горшкова <span class="position">Фронтэнд разработчик</span></p>
+                <p class="info text--md">Молодой, но весьма перспективный разработчик пользовательских интерфейсов. Проекты: Karma, Aurum</p>
+            </div>
+        </div>
+        <div class="gl__team-item">
+            <div class="avatar__wrapper"><img src="img/Anton.png" alt="" class="avatar" /></div>
+            <div class="desc">
+                <p class="name text--lg">Антон Тищенко <span class="position">Фронтэнд разработчик</span></p>
+                <p class="info text--md">Внимательный к деталям разработчик. Учился на учителя русского языка, но нашел себя в разработке интерфейсов, чему мы очень рады. Проекты: Karma, «Школьный Олимп»
+                </p>
+            </div>
+        </div>
+        <div class="gl__team-item">
+            <div class="avatar__wrapper"><img src="img/dima2.png" alt="" class="avatar" /></div>
+            <div class="desc">
+                <p class="name text--lg"> Дмитрий Касаткин <span class="position">QA-инженер</span></p>
+                <p class="info text--md">QA-инженер, который может найти ошибки даже в самой, казалось бы, идеальной системе. Функциональное тестирование, тестирование систем, тестирование производительности, регрессионное тестирование, юзабилити-тестирование и т.п. Проекты: Оборонная промышленность, Karma, Xzen
+                </p>
+            </div>
+        </div>
+        <div class="gl__team-item">
+            <div class="avatar__wrapper"><img src="img/Borz.png" alt="" class="avatar" /></div>
+            <div class="desc">
+                <p class="name text--lg">Борз Вахаев <span class="position">QA-инженер</span></p>
+                <p class="info text--md">Заставит вас извиняться за каждую ошибку.</p>
+            </div>
+        </div>
+        <div class="gl__team-item">
+            <div class="avatar__wrapper"><img src="img/JD.png" alt="" class="avatar" /></div>
+            <div class="desc">
+                <p class="name text--lg">Just Dude <span class="position">EOS Ambassador</span></p>
+                <p class="info text--md">И еще один замечательный человек, который помогает нам пробираться через дебри рутинных задач.
+                </p>
+            </div>
+        </div>
+        <div class="gl__team-item">
+            <div class="avatar__wrapper"><img src="img/Tanya.png" alt="" class="avatar" /></div>
+            <div class="desc">
+                <p class="name text--lg">Татьяна Бредихина</p>
+                <p class="info text--md">Наш талисман, а также заботится обо всей этой толпе</p>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<section id="portfolio" class="gl__portfolio">
+    <div class="container">
+        <h2 class="gl__heading">Наши проекты</h2>
+
+        <div class="product">
+            <div class="view overlay product__image-wrapper">
+                <img class="product__image" src="img/karma.PNG" alt="Karma">
+                <a href="https://app.karma.red/">
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            <div class="product__info">
+                <h4 class="text--lg">KARMA</h4>
+                <div class="text--md">
+                    <p>Карма. Экономика будущего p2p; <br> скоринг и кредитование по всему миру; <br>любые активы, залоги и процентные ставки;<br> накопление репутации, создание сетей доверия</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolorum fuga libero modi officia officiis quae sint tempora ut veritatis!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolorum fuga libero modi officia officiis quae sint tempora ut veritatis!</p>
+                    <p><b>Этапы разработки:</b> Полный цикл</p>
+                </div>
+            </div>
+            <!--<div class="product__sources">-->
+                <!--<a href="#" class="btn btn-flat social-icons"><img src="img/github.svg" alt=""></a>-->
+                <!--<a href="https://app.karma.red/" class="btn btn-flat social-icons"><img src="img/link.svg" alt=""></a>-->
+            <!--</div>-->
+        </div>
+
+        <div class="product">
+            <div class="view overlay product__image-wrapper">
+                <img class="product__image" src="img/xzen_screen.png" alt="Xzen">
+                <a href="#!">
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            <div class="product__info">
+                <h4 class="text--lg">XZEN</h4>
+                <div class="text--md">
+                    <p>Криптовалютный кошелек нового поколения для хранения и управления активами различного типа</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolorum fuga libero modi officia officiis quae sint tempora ut veritatis!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dolorum fuga libero modi officia officiis quae sint tempora ut veritatis!</p>
+                    <p><b>Этапы разработки:</b> Backend/Blockchain/Frontend</p>
+                </div>
+            </div>
+            <!--<div class="product__sources">-->
+                <!--<a href="#" class="btn btn-flat social-icons"><img src="img/github.svg" alt=""></a>-->
+                <!--<a href="#" class="btn btn-flat social-icons"><img src="img/link.svg" alt=""></a>-->
+            <!--</div>-->
+        </div>
+
+        <div class="product">
+            <div class="view overlay product__image-wrapper">
+                <img class="product__image" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                <a href="#!">
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            <div class="product__info">
+                <h4 class="text--lg">EOS PROJECTS</h4>
+                <div class="text--md">
+                    <p><b>myeoswallet.app</b> <br>
+                        Free, open-source, light client-side interface for accessing the EOS wallet. It is easy and reliable to interact with the EOS blockchain
+                        <br><b>eosexplorer.app</b>
+                        <br>Open source web tool that allows you to view information about blocks, addresses, transactions and more on the EOS blockchain
+                        <br><b>voting tools</b>
+                        <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi magni nisi totam velit veniam vero!
+                    </p>
+                    <p><b>Этапы разработки:</b>Полный цикл</p>
+                </div>
+            </div>
+            <!--<div class="product__sources">-->
+                <!--<a href="#" class="btn btn-flat social-icons"><img src="img/github.svg" alt=""></a>-->
+                <!--<a href="#" class="btn btn-flat social-icons"><img src="img/link.svg" alt=""></a>-->
+            <!--</div>-->
+        </div>
+
+    </div>
+</section>
+
+<section id="partners" class="gl__partners">
+    <div class="container">
+        <h2 class="gl__heading">Наши партнеры</h2>
+        <div class="row partners">
+            <a href="#" class="col col-sm-4 partners__item">
+                <div class="card gl__card">
+                    <div class="card-body">
+                        <img src="img/rudex.png" alt="" class="partners__logo">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-sm-4 partners__item">
+                <div class="card gl__card">
+                    <div class="card-body">
+                        <img src="img/gate108.png" alt="" class="partners__logo">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-sm-4 partners__item">
+                <div class="card gl__card">
+                    <div class="card-body">
+                        <img src="img/hashtelegraph.png" alt="" class="partners__logo">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-sm-4 partners__item">
+                <div class="card gl__card">
+                    <div class="card-body">
+                        <img src="img/weare.png" alt="" class="partners__logo">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-sm-4 partners__item">
+                <div class="card gl__card">
+                    <div class="card-body">
+                        <img src="img/blckchnd.png" alt="" class="partners__logo">
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-sm-4 partners__item">
+                <div class="card gl__card">
+                    <div class="card-body">
+                        <img src="img/xzen.png" alt="" style="max-height: 60px" class="partners__logo">
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<section id="contacts" class="gl__contacts">
+    <div class="container">
+        <h2 class="gl__heading">Наши контакты</h2>
+        <div class="row">
+            <!-- Default form contact -->
+            <form class="col-lg-5 col-sm-8 form--vertical">
+                <p class="text--lg">Напишите нам</p>
+
+                <!-- Default input name -->
+                <label for="ct_name" class="gl__label">Ваше имя</label>
+                <input type="text" id="ct_name" class="form-control gl__input">
+
+                <br>
+
+                <!-- Default input email -->
+                <label for="ct_email" class="gl__label">Ваш email</label>
+                <input type="email" id="ct_email" class="form-control gl__input">
+
+                <br>
+
+                <!-- Default input subject -->
+                <label for="ct_subject" class="gl__label">Тема</label>
+                <input type="text" id="ct_subject" class="form-control gl__input">
+
+                <br>
+
+                <!-- Default textarea message -->
+                <label for="ct_message" class="gl__label">Сообщение</label>
+                <textarea type="text" id="ct_message" class="form-control gl__input" rows="5"></textarea>
+
+                <button class="btn btn--lg btn--gl" type="submit">Отправить</button>
+            </form>
+            <!-- Default form contact -->
+            <div class="col-md-7 gl__map-wrapper">
+                <div id='gmap_canvas' class="gl__map"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="gl__footer page-footer">
+
+    <div class="container text-center text-md-left">
+        <div class="row">
+            <div class="col-md-6 footer__column">
+                <img src="img/graphene-wh.png" alt="" class="footer__logo">
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto">
+                <p class="footer__tagline">Наша цель – объединить профессионалов для создания инновационных продуктов
+                    с применением технологии блокчейн</p>
+            </div>
+            <div class="col-md-3 text--md footer__column">
+                <h6 class="text-uppercase font-weight-bold text--md">Продукты</h6>
+                <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <a href="#!">KARMA</a>
+                </p>
+                <p>
+                    <a href="#!">XZEN</a>
+                </p>
+                <p>
+                    <a href="#!">Cryptocean</a>
+                </p>
+                <p>
+                    <a href="#!">Aurum</a>
+                </p>
+
+            </div>
+
+            <div class="col-md-3 text--md footer__column">
+                <h6 class="text-uppercase font-weight-bold text--md">Соцсети</h6>
+                <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <a href="#!">Github</a>
+                </p>
+                <p>
+                    <a href="#!">Telegram</a>
+                </p>
+                <p>
+                    <a href="#!">Facebook</a>
+                </p>
+                <p>
+                    <a href="#!">LinkedIn</a>
+                </p>
+                <p>
+                    <a href="#!">Steemit</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright: Graphene Lab</div>
+    <!-- Copyright -->
+
+</footer>
+
+<!-- SCRIPTS -->
+<script type="text/javascript" src="libs/MDB/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="libs/MDB/js/popper.min.js"></script>
+<script type="text/javascript" src="libs/MDB/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="libs/MDB/js/mdb.min.js"></script>
+<script type="text/javascript" src="libs/owl/owl.carousel.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAadr-QWWetV2Sx6SMuxVIUdHISH-1YcxI"></script>
+
+<script type='text/javascript'>
+
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            loop:true,
+            autoplay:true,
+            autoplayTimeout:5000,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                1000:{
+                    items:3
+                }
+            }
+        });
+
+        const ANGLE = 3;
+        var cards = document.querySelectorAll(".gl__advantages-item");
+        cards.forEach(function(item){
+            floatable(item);
+        });
+
+        function floatable (panel) {
+            var content = panel.querySelector(".gl__card--advantage");
+
+            panel.addEventListener('mouseout', function() {
+                content.style.transform = 'perspective(300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)';
+            });
+
+            panel.addEventListener('mousemove', function(e) {
+                var w = panel.clientWidth,
+                    h = panel.clientHeight,
+                    y = (e.offsetX - w * 0.5) / w * ANGLE,
+                    x = (1 - (e.offsetY - h * 0.5)) / h * ANGLE;
+
+                content.style.transform = 'perspective(300px) rotateX('+x+'deg) rotateY('+y+'deg)';
+            });
+        }
+
+        if(window.innerWidth < 1000){
+            var menu = $('.navbar-nav');
+            $('.gl__navbar').on('click', function (e) {
+                e.preventDefault();
+                !menu.hasClass('open')
+                    ? menu.addClass('open')
+                    : menu.removeClass('open')
+            })
+        }
+
+    });
+
+    $('.js-link-anchor').on('click', function () {
+        var px = $($(this).attr('href')).offset().top;
+        $('html, body').animate({ scrollTop: px }, px === 0 ? 1000 : px/10);
+    });
+
+    var data = [
+        {
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#f5f5f5"
+                }
+            ]
+        },
+        {
+            "elementType": "labels.icon",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "color": "#616161"
+                }
+            ]
+        },
+        {
+            "elementType": "labels.text.stroke",
+            "stylers": [
+                {
+                    "color": "#f5f5f5"
+                }
+            ]
+        },
+        {
+            "featureType": "administrative.land_parcel",
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "color": "#bdbdbd"
+                }
+            ]
+        },
+        {
+            "featureType": "landscape.man_made",
+            "elementType": "geometry.fill",
+            "stylers": [
+                {
+                    "color": "#c0c0c0"
+                }
+            ]
+        },
+        {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#eeeeee"
+                }
+            ]
+        },
+        {
+            "featureType": "poi",
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "color": "#757575"
+                }
+            ]
+        },
+        {
+            "featureType": "poi.park",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#e5e5e5"
+                }
+            ]
+        },
+        {
+            "featureType": "poi.park",
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "color": "#9e9e9e"
+                }
+            ]
+        },
+        {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#ffffff"
+                }
+            ]
+        },
+        {
+            "featureType": "road.arterial",
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "color": "#757575"
+                }
+            ]
+        },
+        {
+            "featureType": "road.highway",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#dadada"
+                }
+            ]
+        },
+        {
+            "featureType": "road.highway",
+            "elementType": "geometry.fill",
+            "stylers": [
+                {
+                    "color": "#ff484d"
+                }
+            ]
+        },
+        {
+            "featureType": "road.highway",
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "color": "#616161"
+                }
+            ]
+        },
+        {
+            "featureType": "road.local",
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "color": "#9e9e9e"
+                }
+            ]
+        },
+        {
+            "featureType": "transit.line",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#e5e5e5"
+                }
+            ]
+        },
+        {
+            "featureType": "transit.station",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#eeeeee"
+                }
+            ]
+        },
+        {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#c9c9c9"
+                }
+            ]
+        },
+        {
+            "featureType": "water",
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "color": "#9e9e9e"
+                }
+            ]
+        }
+    ];
+
+    function init_map() {
+        var myOptions = {
+            zoom: 16
+            , center: new google.maps.LatLng(59.94613058084488, 30.36538237927166)
+            , mapTypeId: google.maps.MapTypeId.ROADMAP
+            , styles: data
+        };
+        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+        marker = new google.maps.Marker({
+            map: map,
+            position: new google.maps.LatLng(59.94613058084488, 30.36538237927166),
+            animation: google.maps.Animation.DROP,
+            icon: 'img/ico_marker.svg'
+        });
+        infowindow = new google.maps.InfoWindow({
+            content: '<p class="map__marker">Graphene Lab<br>г. Санкт-Петербург, ул. Чайковского, 79, офис 11</p>'
+        });
+
+        google.maps.event.addListener(marker, 'click', function () {
+            infowindow.open(map, marker);
+        });
+        infowindow.open(map, marker);
+    }
+
+    google.maps.event.addDomListener(window, 'load', init_map);
+</script>
 
 </body>
 
