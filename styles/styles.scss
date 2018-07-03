@@ -17,7 +17,7 @@ $primary_03: rgba(49, 54, 71, 0.3);
 
 $secondary: #888888;
 $light: #ffffff;
-$light_op: rgba(255, 255, 255, 0.8);
+$light_op: rgba(255, 255, 255, 0.9);
 $ground: #e8e8e8;
 $ground_op: rgba(232, 232, 232, 0.5);
 
@@ -30,6 +30,7 @@ $gradient-gtd: linear-gradient(145deg, $light, #2c3e50);
 $gradient-gtp: linear-gradient(-105deg, $ground_op, $primary_op);
 $gradient-intro: linear-gradient(55deg, $primary, $primary_03);
 $gradient-gtg: linear-gradient(145deg, $accent_op, $warning_op);
+$gradient-pta: linear-gradient(-105deg, rgba(238, 67, 69, 0.9), rgb(49, 54, 71));
 
 $anim: 0.3s;
 $fz-sm: 1.4rem;
@@ -37,8 +38,11 @@ $fz-md: 1.6rem;
 $fz-lg: 2.4rem;
 $fz-xl: 3rem;
 
+
+@import "services";
+
 section {
-  padding: 6rem 0;
+  padding: 8rem 0;
   background-color: $light;
 }
 
@@ -53,6 +57,7 @@ section {
     box-shadow: none;
     @media screen and (max-width: 1000px){
       min-width: auto;
+      height: 5rem;
     }
     &:before,
     &:after {
@@ -87,8 +92,8 @@ section {
       margin-left: auto;
       @media screen and (max-width: 1000px){
         position: absolute;
+        top: 5rem;
         flex-direction:  column;
-        top: 6rem;
         background: $light;
         border-radius: 0 0 1rem 0;
         border-style: solid;
@@ -145,7 +150,7 @@ section {
     font-size: $fz-lg;
     line-height: 1.5;
     padding: 0.2rem 0;
-    margin-bottom: 5rem;
+    margin-bottom: 8rem;
     &:after {
       content: '';
       position: absolute;
@@ -173,21 +178,30 @@ section {
     padding: 0;
     overflow: hidden;
     background-color: transparent;
-    .intro__video-bg{
-      position: fixed;
-      z-index: -100;
-      top: 50%;
-      left: 50%;
-      min-height: 100%;
-      min-width: 100%;
-      transform: translate(-50%, -50%);
-    }
     .carousel{
       position: relative;
       z-index: 5;
       width: 100%;
       &-inner, &-item{
         height: 100%;
+      }
+    }
+    @media screen and (max-width: 1000px){
+      .carousel-control-next, .carousel-control-prev{
+        top: auto;
+        bottom: 1rem;
+        width: 4rem;
+        height: 4rem;
+      }
+      .carousel-control-next{
+        right: 2rem;
+      }
+      .carousel-control-prev{
+        left: auto;
+        right: 6rem;
+      }
+      .carousel-indicators{
+        display: none;
       }
     }
   }
@@ -233,7 +247,27 @@ section {
     list-style: none;
   }
 
+  &__services{
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      width: auto;
+      margin: 2rem 0 0;
+      background-image: $gradient-accent;
+      border-radius: 2rem;
+      &:active{
+        background-image: $gradient-accent;
+      }
+      &:hover{
+        color: $light;
+      }
+    }
+  }
+
   &__advantages{
+    background: $gradient-wtw, url('../img/ground.png') center center no-repeat fixed;
+    background-color: $light;
+    background-size: cover;
     .col{
       display: flex;
       align-items: stretch;
@@ -404,7 +438,7 @@ section {
       box-shadow:
               0 10px 20px 0 $ground_op,
               0 20px 40px 0 $ground_op;
-      transition: $anim all;
+      transition: $anim/3 all;
       @media screen and (max-width: 600px){
         padding: 1.5rem;
       }
@@ -494,6 +528,16 @@ section {
       margin-top: 4rem;
     }
   }
+}
+
+.intro__video-bg{
+  position: fixed;
+  z-index: -100;
+  top: 50%;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  transform: translate(-50%, -50%);
 }
 
 .hexagon {
@@ -615,9 +659,10 @@ section {
 }
 
 #advantages-blckchn{
-  background-image: url('../img/lines.svg');
-  background-position: center right;
-  background-repeat: no-repeat;
+  //background-image: url('../img/lines.svg');
+  //background-position: center right;
+  //background-repeat: no-repeat;
+  margin-bottom: 6rem;
   .gl__card--advantage{
     flex-direction: row;
     @media screen and (max-width: 1000px){
@@ -643,9 +688,6 @@ section {
 }
 
 #advantages-graphene{
-  background: $gradient-wtw, url('../img/ground.png') center center no-repeat fixed;
-  background-color: $light;
-  background-size: cover;
   .owl-carousel{
     @media screen and (max-width: 1000px){
       margin: auto;
