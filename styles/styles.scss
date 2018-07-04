@@ -220,6 +220,7 @@ section {
     .gl__heading--sm {
       text-align: left !important;
       margin-bottom: 2rem;
+      word-break: break-word;
     }
   }
 
@@ -260,6 +261,9 @@ section {
       }
       &:hover{
         color: $light;
+      }
+      @media screen and (max-width: 1000px){
+        margin: auto;
       }
     }
   }
@@ -306,18 +310,18 @@ section {
     display: flex;
     align-items: flex-start;
     margin-bottom: 4rem;
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 800px){
       flex-direction: column;
       align-items: center;
     }
     &:nth-child(2n){
       flex-direction: row-reverse;
-      @media screen and (max-width: 600px){
+      @media screen and (max-width: 800px){
         flex-direction: column;
       }
       .name{
         align-items: flex-end;
-        @media screen and (max-width: 600px){
+        @media screen and (max-width: 800px){
           align-items: flex-start;
         }
         &:after{
@@ -326,7 +330,7 @@ section {
           transform: skew(-30deg);
           border-width: 0 3px 3px 0;
           border-radius: 0 0 0.6rem 0;
-          @media screen and (max-width: 600px){
+          @media screen and (max-width: 800px){
             transform: none;
             left: 0;
             right: 0;
@@ -341,7 +345,7 @@ section {
       display: flex;
       flex-direction: column;
       padding: 0 6rem;
-      @media screen and (max-width: 600px){
+      @media screen and (max-width: 800px){
         padding: 2rem;
       }
     }
@@ -367,7 +371,7 @@ section {
         border-width: 0 0 3px 3px;
         border-radius: 0 0 0 0.6rem;
         transform: skew(30deg);
-        @media screen and (max-width: 600px){
+        @media screen and (max-width: 800px){
           transform: none;
           left: 0;
           border-width: 0 0 3px;
@@ -439,7 +443,7 @@ section {
               0 10px 20px 0 $ground_op,
               0 20px 40px 0 $ground_op;
       transition: $anim/3 all;
-      @media screen and (max-width: 600px){
+      @media screen and (max-width: 800px){
         padding: 1.5rem;
       }
       .card-header {
@@ -507,7 +511,7 @@ section {
         max-width: 350px;
       }
       &__column{
-        @media screen and (max-width: 600px){
+        @media screen and (max-width: 800px){
           display: flex;
           flex-direction: column;
           align-items: flex-start;
@@ -742,7 +746,7 @@ b, strong{
   align-items: flex-start;
   margin-bottom: 6rem;
   padding: 0;
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: 800px){
     flex-direction: column;
   }
   &__image-wrapper{
@@ -752,7 +756,7 @@ b, strong{
     transform: translate(-2rem, -3rem);
     filter: drop-shadow($ground 0 0 10px);
     transition: $anim all;
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 800px){
       width: 100%;
       padding: 1.5rem;
       transform: none;
@@ -779,7 +783,7 @@ b, strong{
     box-shadow:
             0 10px 20px 0 $ground_op,
             0 20px 40px 0 $ground_op;
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 800px){
       width: 100%;
       margin: -10rem 0 0;
       padding: 12rem 2rem 6rem;
@@ -806,7 +810,7 @@ b, strong{
         width: 2rem;
       }
     }
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 800px){
       left: 0;
       right: 0;
       width: 100%;
@@ -827,7 +831,7 @@ b, strong{
   &__item{
     display: flex;
     margin-bottom: 3rem;
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 800px){
       width: 100%;
       flex-basis: auto;
     }
@@ -841,13 +845,13 @@ b, strong{
       box-shadow:
               0 10px 20px 0 $ground_op,
               0 20px 40px 0 $ground_op;
-      @media screen and (max-width: 600px){
+      @media screen and (max-width: 800px){
         padding: 1rem 2rem;
       }
       .card-body{
         display: flex;
         align-items: center;
-        @media screen and (max-width: 600px){
+        @media screen and (max-width: 800px){
           img{
             height: 5rem;
           }
