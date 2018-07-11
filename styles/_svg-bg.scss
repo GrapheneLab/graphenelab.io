@@ -1,0 +1,90 @@
+#pieces {
+  position: absolute;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  mix-blend-mode: multiply;
+}
+
+#path1, #path2 {
+  mix-blend-mode: multiply;
+}
+
+#path2 {
+  opacity: .7;
+}
+
+// gradients
+linearGradient {
+  stop {
+    transition: all .4s ease-in-out;
+  }
+}
+
+.section1 {
+
+  #fill1 {
+
+    .stop1 {
+      stop-color: rgba(242, 59, 62, 0.71);
+    }
+
+    .stop2 {
+      stop-color: rgba(109, 58, 131, 0.71);
+    }
+  }
+
+  #fill2 {
+    .stop1 {
+      stop-color: rgba(238, 58, 158, 0.71);
+    }
+
+    .stop2 {
+      stop-color: rgba(47, 126, 191, 0.7);
+    }
+  }
+}
+
+.section2 {
+  #fill1 {
+    .stop1 {
+      stop-color: rgba(113, 58, 128, 0.71);
+    }
+
+    .stop2 {
+      stop-color: rgba(204, 59, 88, 0.71);
+    }
+  }
+
+  #fill2 {
+    .stop1 {
+      stop-color: rgba(177, 52, 150, 0.71);
+    }
+
+    .stop2 {
+      stop-color: rgba(74, 69, 135, 0.71);
+    }
+  }
+}
+
+.section3 {
+  #fill1 {
+    .stop1 {
+      stop-color: rgba(243, 59, 71, 0.71);
+    }
+
+    .stop2 {
+      stop-color: rgba(187, 59, 96, 0.71);
+    }
+  }
+
+  #fill2 {
+    .stop1 {
+      stop-color: rgba(44, 148, 198, 0.71);
+    }
+
+    .stop2 {
+      stop-color: rgba(57, 68, 156, 0.71);
+    }
+  }
+}

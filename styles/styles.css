@@ -116,6 +116,49 @@ body {
       transform: translateX(100%);
       transition: all 1.2s ease-in-out; }
 
+#pieces {
+  position: absolute;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  mix-blend-mode: multiply; }
+
+#path1, #path2 {
+  mix-blend-mode: multiply; }
+
+#path2 {
+  opacity: .7; }
+
+linearGradient stop {
+  transition: all .4s ease-in-out; }
+
+.section1 #fill1 .stop1 {
+  stop-color: rgba(242, 59, 62, 0.71); }
+.section1 #fill1 .stop2 {
+  stop-color: rgba(109, 58, 131, 0.71); }
+.section1 #fill2 .stop1 {
+  stop-color: rgba(238, 58, 158, 0.71); }
+.section1 #fill2 .stop2 {
+  stop-color: rgba(47, 126, 191, 0.7); }
+
+.section2 #fill1 .stop1 {
+  stop-color: rgba(113, 58, 128, 0.71); }
+.section2 #fill1 .stop2 {
+  stop-color: rgba(204, 59, 88, 0.71); }
+.section2 #fill2 .stop1 {
+  stop-color: rgba(177, 52, 150, 0.71); }
+.section2 #fill2 .stop2 {
+  stop-color: rgba(74, 69, 135, 0.71); }
+
+.section3 #fill1 .stop1 {
+  stop-color: rgba(243, 59, 71, 0.71); }
+.section3 #fill1 .stop2 {
+  stop-color: rgba(187, 59, 96, 0.71); }
+.section3 #fill2 .stop1 {
+  stop-color: rgba(44, 148, 198, 0.71); }
+.section3 #fill2 .stop2 {
+  stop-color: rgba(57, 68, 156, 0.71); }
+
 section {
   padding: 8rem 0;
   background-color: #ffffff; }
@@ -286,10 +329,10 @@ section {
   align-items: center;
   width: auto;
   margin: 2rem 0 0;
-  background-image: linear-gradient(145deg, #FF8800, #d24a43);
+  background-image: linear-gradient(145deg, #FF8800, #d24a43) !important;
   border-radius: 2rem; }
   .gl__services .btn:active {
-    background-image: linear-gradient(145deg, #FF8800, #d24a43); }
+    background-image: linear-gradient(145deg, #FF8800, #d24a43) !important; }
   .gl__services .btn:hover {
     color: #ffffff; }
   @media screen and (max-width: 1000px) {
@@ -396,8 +439,8 @@ section {
 .gl__contacts {
   background-color: rgba(0, 0, 0, 0.6);
   padding-bottom: 6rem; }
-  .gl__contacts .btn--gl {
-    background-image: linear-gradient(145deg, #FF8800, #d24a43); }
+  .gl__contacts .btn--gl, .gl__contacts .btn--gl:active {
+    background-image: linear-gradient(145deg, #FF8800, #d24a43) !important; }
   .gl__contacts .gl__heading {
     color: #ffffff; }
   .gl__contacts .gl__label {
@@ -483,14 +526,17 @@ section {
   .gl__footer .footer-copyright {
     margin-top: 4rem; }
 
-.intro__video-bg {
+.intro__animate-bg {
   position: fixed;
-  z-index: -100;
-  top: 50%;
-  left: 50%;
-  min-height: 100%;
-  min-width: 100%;
-  transform: translate(-50%, -50%); }
+  z-index: -100; }
+  .intro__animate-bg video {
+    position: fixed;
+    z-index: -100;
+    top: 50%;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    transform: translate(-50%, -50%); }
 
 .hexagon {
   fill: transparent;
@@ -544,12 +590,12 @@ section {
 
 .btn-rounded {
   border-radius: 3rem; }
-.btn--gl {
-  background-image: linear-gradient(-105deg, rgba(232, 232, 232, 0.5), rgba(49, 54, 71, 0.9));
+.btn--gl, .btn--gl:active {
+  background-image: linear-gradient(-105deg, rgba(232, 232, 232, 0.5), rgba(49, 54, 71, 0.9)) !important;
   background-size: 200%;
   background-position: top left;
   transition: 0.3s; }
-  .btn--gl:hover {
+  .btn--gl:hover, .btn--gl:active:hover {
     background-position: bottom right; }
 .btn--lg {
   height: 4rem;

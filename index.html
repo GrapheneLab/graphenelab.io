@@ -41,11 +41,30 @@
     </ul>
 </nav>
 
+<div class="intro__animate-bg">
 <video class="intro__video-bg" playsinline autoplay muted loop>
     <source src="img/intro.mp4" type="video/mp4"/>
     <source src="img/intro.ogv" type="video/ogv"/>
+    <!--<source src="https://d3macfshcnzosd.cloudfront.net/010918145_main_xxl.mp4" type="video/mp4"/>-->
     Ваш браузер не поддерживает проигрывание видео.
 </video>
+<!--<svg id="pieces" class="section1">-->
+    <!--<defs>-->
+        <!--<linearGradient id="fill1">-->
+            <!--<stop class="stop1" offset="0%"></stop>-->
+            <!--<stop class="stop2" offset="100%"></stop>-->
+        <!--</linearGradient>-->
+        <!--<linearGradient id="fill2">-->
+            <!--<stop class="stop1" offset="0%"></stop>-->
+            <!--<stop class="stop2" offset="100%"></stop>-->
+        <!--</linearGradient>-->
+    <!--</defs>-->
+    <!--<polygon id="path1" points="0,0 174,0 609,578 0,578 " fill="url(#fill1)"></polygon>-->
+    <!--<polygon id="path2" points="0,0 0,0 870,578 0,578 " fill="url(#fill2)"></polygon>-->
+<!--</svg>-->
+</div>
+
+<!--<button class="btn js-change-svg-bg">change</button>-->
 
 <section id="intro" class="gl__intro">
 
@@ -53,11 +72,11 @@
 
     <div id="intro-carousel" class="carousel slide carousel-fade" data-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-target="#intro-carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#intro-carousel" data-slide-to="1"></li>
-            <li data-target="#intro-carousel" data-slide-to="2"></li>
-            <li data-target="#intro-carousel" data-slide-to="3"></li>
-            <li data-target="#intro-carousel" data-slide-to="4"></li>
+            <li class="js-change-svg-bg active" data-target="#intro-carousel" data-slide-to="0"></li>
+            <li class="js-change-svg-bg" data-target="#intro-carousel" data-slide-to="1"></li>
+            <li class="js-change-svg-bg" data-target="#intro-carousel" data-slide-to="2"></li>
+            <li class="js-change-svg-bg" data-target="#intro-carousel" data-slide-to="3"></li>
+            <li class="js-change-svg-bg" data-target="#intro-carousel" data-slide-to="4"></li>
         </ol>
 
         <div class="carousel-inner" role="listbox">
@@ -154,23 +173,28 @@
                 <div class="services__list text--md tab-content">
                     <div class="services__item tab-pane fade in show active" id="service1" role="tabpanel">
                         <img src="img/labyrinth.svg" alt="" class="services__ico">
-                        <h3 class="services__title">Разработка, интеграция и аудит блокчейн-приложений</h3>
-                        <p class="services__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur atque dolore fugit nihil odio quis reprehenderit tempora velit veniam!</p>
+                        <h3 class="services__title">Разработка и интеграция блокчейн-приложений</h3>
+                        <p class="services__desc">Создание приложений, базирующихся на существующих публичных блокчейн-платформах.</p>
                     </div>
                     <div class="services__item tab-pane fade" id="service2" role="tabpanel">
                         <img src="img/turnkey.svg" alt="" class="services__ico">
                         <h3 class="services__title">Запуск блокчейна “под ключ”</h3>
-                        <p class="services__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur atque dolore fugit nihil odio quis reprehenderit tempora velit veniam!</p>
+                        <p class="services__desc">Полный цикл разработки и запуска блокчейн-платформ с интеграцией любой бизнес-логики (на базе Graphene/EOS)</p>
                     </div>
                     <div class="services__item tab-pane fade" id="service3" role="tabpanel">
                         <img src="img/analytics.svg" alt="" class="services__ico">
-                        <h3 class="services__title">Разработка бизнес-решений с применением технологии блокчейн</h3>
-                        <p class="services__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur atque dolore fugit nihil odio quis reprehenderit tempora velit veniam!</p>
+                        <h3 class="services__title">Разработка и внедрение бизнес-решений с применением технологии блокчейн</h3>
+                        <p class="services__desc">Интеграция технологии блокчейн в бизнес-процессы компаний из различных отраслей и сфер бизнеса, включая финансы, страхование, здравоохранение и логистику</p>
                     </div>
                     <div class="services__item tab-pane fade" id="service4" role="tabpanel">
                         <img src="img/contract.svg" alt="" class="services__ico">
-                        <h3 class="services__title">Разработка и аудит смарт-контрактов и DApps на EOS</h3>
-                        <p class="services__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur atque dolore fugit nihil odio quis reprehenderit tempora velit veniam!</p>
+                        <h3 class="services__title">Разработка смарт-контрактов и DApps (EOS)</h3>
+                        <p class="services__desc">Разработка смарт-контрактов и DApps любой сложности на блокчейн-платформе EOS с оптимизацией использования RAM</p>
+                    </div>
+                    <div class="services__item tab-pane fade" id="service5" role="tabpanel">
+                        <img src="img/file.svg" alt="" class="services__ico">
+                        <h3 class="services__title">Аудит блокчейн-решений и смарт-контрактов (EOS)</h3>
+                        <p class="services__desc">Комплексный аудит безопасности вашей блокчейн-платформы и смарт-контрактов EOS на предмет уязвимостей и ошибок в коде</p>
                     </div>
                 </div>
             </div>
@@ -178,7 +202,7 @@
                 <ul class="services__tabnav nav md-pills pills-primary flex-column" role="tablist">
                     <li class="nav-item economy services__tablink">
                         <a class="nav-link " data-toggle="tab" href="#service1" role="tab">
-                            Разработка, интеграция и аудит блокчейн-приложений
+                            Разработка и интеграция блокчейн-приложений
                         </a>
                     </li>
                     <li class="nav-item premiumeconomy services__tablink">
@@ -188,12 +212,17 @@
                     </li>
                     <li class="nav-item business services__tablink">
                         <a class="nav-link" data-toggle="tab" href="#service3" role="tab">
-                            Разработка бизнес-решений с применением технологии блокчейн
+                            Разработка и внедрение бизнес-решений с применением технологии блокчейн
                         </a>
                     </li>
                     <li class="nav-item first services__tablink">
                         <a class="nav-link" data-toggle="tab" href="#service4" role="tab">
-                            Разработка и аудит смарт-контрактов и DApps на EOS
+                            Разработка смарт-контрактов и DApps (EOS)
+                        </a>
+                    </li>
+                    <li class="nav-item first services__tablink">
+                        <a class="nav-link" data-toggle="tab" href="#service5" role="tab">
+                            Аудит блокчейн-решений и смарт-контрактов (EOS)
                         </a>
                     </li>
                 </ul>
@@ -724,67 +753,11 @@
 <script type="text/javascript" src="libs/MDB/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="libs/MDB/js/mdb.min.js"></script>
 <script type="text/javascript" src="libs/owl/owl.carousel.min.js"></script>
+<script type="text/javascript" src="libs/TWMax/script.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAadr-QWWetV2Sx6SMuxVIUdHISH-1YcxI"></script>
 
 <script type='text/javascript'>
-
-    $(document).ready(function () {
-        $(".owl-carousel").owlCarousel({
-            loop: true,
-            autoplay: true,
-            autoplayTimeout: 5000,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2
-                },
-                1000: {
-                    items: 3
-                }
-            }
-        });
-
-        const ANGLE = 3;
-        var cards = document.querySelectorAll(".gl__advantages-item");
-        cards.forEach(function (item) {
-            floatable(item);
-        });
-
-        function floatable(panel) {
-            var content = panel.querySelector(".gl__card--advantage");
-
-            panel.addEventListener('mouseout', function () {
-                content.style.transform = 'perspective(300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)';
-            });
-
-            panel.addEventListener('mousemove', function (e) {
-                var w = panel.clientWidth,
-                    h = panel.clientHeight,
-                    y = (e.offsetX - w * 0.5) / w * ANGLE,
-                    x = (1 - (e.offsetY - h * 0.5)) / h * ANGLE;
-
-                content.style.transform = 'perspective(300px) rotateX(' + x + 'deg) rotateY(' + y + 'deg)';
-            });
-        }
-
-        if (window.innerWidth < 1000) {
-            var menu = $('.navbar-nav');
-            $('.gl__navbar').on('click', function (e) {
-                e.preventDefault();
-                !menu.hasClass('open')
-                    ? menu.addClass('open')
-                    : menu.removeClass('open')
-            })
-        }
-
-    });
-
-    $('.js-link-anchor').on('click', function () {
-        var px = $($(this).attr('href')).offset().top;
-        $('html, body').animate({scrollTop: px}, px === 0 ? 1000 : px / 10);
-    });
 
     var data = [
         {
