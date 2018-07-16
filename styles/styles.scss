@@ -43,6 +43,8 @@ $fz-xl: 3rem;
 @import "svg-bg";
 
 section {
+  position: relative;
+  z-index: 1;
   padding: 8rem 0;
   background-color: $light;
 }
@@ -874,4 +876,8 @@ b, strong{
 
 .map__marker{
 
+}
+
+.blur{
+  filter: blur(2px);
 }
