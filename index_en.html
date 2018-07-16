@@ -41,11 +41,28 @@
     </ul>
 </nav>
 
-<video class="intro__video-bg" playsinline autoplay muted loop>
-    <source src="img/intro.mp4" type="video/mp4"/>
-    <source src="img/intro.ogv" type="video/ogv"/>
-    Your browser does not support the video tag.
-</video>
+<div class="intro__animate-bg">
+    <video class="intro__video-bg" playsinline autoplay muted loop>
+        <source src="img/intro.mp4" type="video/mp4"/>
+        <source src="img/intro.ogv" type="video/ogv"/>
+        <!--<source src="https://d3macfshcnzosd.cloudfront.net/010918145_main_xxl.mp4" type="video/mp4"/>-->
+        Ваш браузер не поддерживает проигрывание видео.
+    </video>
+    <!--<svg id="pieces" class="section1">-->
+    <!--<defs>-->
+    <!--<linearGradient id="fill1">-->
+    <!--<stop class="stop1" offset="0%"></stop>-->
+    <!--<stop class="stop2" offset="100%"></stop>-->
+    <!--</linearGradient>-->
+    <!--<linearGradient id="fill2">-->
+    <!--<stop class="stop1" offset="0%"></stop>-->
+    <!--<stop class="stop2" offset="100%"></stop>-->
+    <!--</linearGradient>-->
+    <!--</defs>-->
+    <!--<polygon id="path1" points="0,0 174,0 609,578 0,578 " fill="url(#fill1)"></polygon>-->
+    <!--<polygon id="path2" points="0,0 0,0 870,578 0,578 " fill="url(#fill2)"></polygon>-->
+    <!--</svg>-->
+</div>
 
 <section id="intro" class="gl__intro">
 
@@ -153,27 +170,30 @@
                 <div class="services__list text--md tab-content">
                     <div class="services__item tab-pane fade in show active" id="service1" role="tabpanel">
                         <img src="img/labyrinth.svg" alt="" class="services__ico">
-                        <h3 class="services__title">Blockchain application development, audit, and integration</h3>
-                        <p class="services__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-                            aspernatur atque dolore fugit nihil odio quis reprehenderit tempora velit veniam!</p>
+                        <h3 class="services__title">Blockchain application development and integration</h3>
+                        <p class="services__desc">Application development based on existing public blockchain platforms.</p>
                     </div>
                     <div class="services__item tab-pane fade" id="service2" role="tabpanel">
                         <img src="img/turnkey.svg" alt="" class="services__ico">
                         <h3 class="services__title">Turnkey blockchain launches</h3>
-                        <p class="services__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-                            aspernatur atque dolore fugit nihil odio quis reprehenderit tempora velit veniam!</p>
+                        <p class="services__desc">Full development and launch cycle of blockchain platforms including implementation of any business logic based on Graphene/EOS</p>
                     </div>
                     <div class="services__item tab-pane fade" id="service3" role="tabpanel">
                         <img src="img/analytics.svg" alt="" class="services__ico">
-                        <h3 class="services__title">Blockchain based Business Solution development</h3>
-                        <p class="services__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-                            aspernatur atque dolore fugit nihil odio quis reprehenderit tempora velit veniam!</p>
+                        <h3 class="services__title">Blockchain based Business Solution development and implementation</h3>
+                        <p class="services__desc">Integration of blockchain technology into business processes for companies from different industries, including finance, insurance, medical, and logistic
+                        </p>
                     </div>
                     <div class="services__item tab-pane fade" id="service4" role="tabpanel">
                         <img src="img/contract.svg" alt="" class="services__ico">
-                        <h3 class="services__title">EOS Smart contract development and audit</h3>
-                        <p class="services__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-                            aspernatur atque dolore fugit nihil odio quis reprehenderit tempora velit veniam!</p>
+                        <h3 class="services__title">EOS Smart contracts and DApps development</h3>
+                        <p class="services__desc">Smart contract & DApp development for EOS with RAM optimization</p>
+                    </div>
+                    <div class="services__item tab-pane fade" id="service5" role="tabpanel">
+                        <img src="img/file.svg" alt="" class="services__ico">
+                        <h3 class="services__title">EOS Smart contract and Blockchain based Business Solution audit</h3>
+                        <p class="services__desc">Complex security audit for your blockchain platform and EOS smart contracts code for bugs and vulnerabilities
+                        </p>
                     </div>
                 </div>
             </div>
@@ -181,7 +201,7 @@
                 <ul class="services__tabnav nav md-pills pills-primary flex-column" role="tablist">
                     <li class="nav-item economy services__tablink">
                         <a class="nav-link " data-toggle="tab" href="#service1" role="tab">
-                            Blockchain application development, audit, and integration
+                            Blockchain application development and integration
                         </a>
                     </li>
                     <li class="nav-item premiumeconomy services__tablink">
@@ -191,12 +211,17 @@
                     </li>
                     <li class="nav-item business services__tablink">
                         <a class="nav-link" data-toggle="tab" href="#service3" role="tab">
-                            Blockchain based Business Solution development
+                            Blockchain based Business Solution development and implementation
                         </a>
                     </li>
                     <li class="nav-item first services__tablink">
                         <a class="nav-link" data-toggle="tab" href="#service4" role="tab">
-                            EOS Smart contract development and audit
+                            EOS Smart contracts and DApps development
+                        </a>
+                    </li>
+                    <li class="nav-item first services__tablink">
+                        <a class="nav-link" data-toggle="tab" href="#service5" role="tab">
+                            EOS Smart contract and Blockchain based Business Solution audit
                         </a>
                     </li>
                 </ul>
