@@ -49,10 +49,11 @@ $(document).ready(function () {
         })
     }
 
-    $('.js-change-svg-bg').on('click', function(){ changeBg() });
+    if($('#pieces')){
+        $('.js-change-svg-bg').on('click', function(){ changeBg() });
 
-    setInterval(function(){ changeBg() }, 5000);
-
+        setInterval(function(){ changeBg() }, 5000);
+    }
 });
 
 $('.js-link-anchor').on('click', function () {
