@@ -541,6 +541,7 @@ section {
 .intro__animate-bg{
   position: fixed;
   z-index: -100;
+  -webkit-transform: translate3d(0,0,0);
   video{
     position: fixed;
     z-index: -100;
