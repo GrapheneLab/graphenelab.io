@@ -50,6 +50,71 @@ $(document).ready(function () {
     }
 
     if ($('#pieces').length > 0) {
+
+        var w = $(window).width(),
+            h = $(window).height(),
+            totalSection = 3,
+            actualSection = 1,
+            path1,
+            path2,
+            section1,
+            section2,
+            section3;
+
+        function sections() {
+            w = $(window).width();
+            h = $(window).height();
+
+            section1 = {
+                path1: [
+                    {x: 0, y: 0},
+                    {x: w * 0.2, y: 0},
+                    {x: w * 0.7, y: h},
+                    {x: 0, y: h}
+                ],
+                path2: [
+                    {x: -w * 0.2, y: h * 0.2},
+                    {x: 0, y: 0},
+                    {x: w, y: h},
+                    {x: 0, y: h}
+                ]
+            };
+
+            section2 = {
+                path1: [
+                    {x: w * 0.15, y: 0},
+                    {x: w, y: 0},
+                    {x: w, y: h},
+                    {x: w * 0.65, y: h}
+                ],
+                path2: [
+                    {x: w, y: h * 0.3},
+                    {x: w * 2, y: h * 0.3},
+                    {x: w, y: h},
+                    {x: w * 0.45, y: h}
+                ]
+            };
+
+            section3 = {
+                path1: [
+                    {x: w * 0.1, y: 0},
+                    {x: w, y: 0},
+                    {x: w * 1.1, y: h * 0.7},
+                    {x: w, y: h * 0.95}
+                ],
+                path2: [
+                    {x: w * 0.18, y: 0},
+                    {x: w, y: 0},
+                    {x: w * 0.95, y: h},
+                    {x: w * 0.55, y: h}
+                ]
+            }
+        }
+
+        $(window).on('resize', function () {
+            morphingPaths(actualSection);
+        }).resize();
+
         function changeBg() {
             actualSection = (actualSection >= totalSection) ? 1 : ++actualSection;
             $('#pieces').removeAttr('class').addClass('section' + actualSection);
@@ -120,68 +185,3 @@ $('.js-link-anchor').on('click', function () {
     var px = $($(this).attr('href')).offset().top;
     $('html, body').animate({scrollTop: px}, px === 0 ? 1000 : px / 10);
 });
-
-
-var w = $(window).width(),
-    h = $(window).height(),
-    totalSection = 3,
-    actualSection = 1,
-    path1,
-    path2,
-    section1,
-    section2,
-    section3;
-
-function sections() {
-    w = $(window).width();
-    h = $(window).height();
-
-    section1 = {
-        path1: [
-            {x: 0, y: 0},
-            {x: w * 0.2, y: 0},
-            {x: w * 0.7, y: h},
-            {x: 0, y: h}
-        ],
-        path2: [
-            {x: -w * 0.2, y: h * 0.2},
-            {x: 0, y: 0},
-            {x: w, y: h},
-            {x: 0, y: h}
-        ]
-    };
-
-    section2 = {
-        path1: [
-            {x: w * 0.15, y: 0},
-            {x: w, y: 0},
-            {x: w, y: h},
-            {x: w * 0.65, y: h}
-        ],
-        path2: [
-            {x: w, y: h * 0.3},
-            {x: w * 2, y: h * 0.3},
-            {x: w, y: h},
-            {x: w * 0.45, y: h}
-        ]
-    };
-
-    section3 = {
-        path1: [
-            {x: w * 0.1, y: 0},
-            {x: w, y: 0},
-            {x: w * 1.1, y: h * 0.7},
-            {x: w, y: h * 0.95}
-        ],
-        path2: [
-            {x: w * 0.18, y: 0},
-            {x: w, y: 0},
-            {x: w * 0.95, y: h},
-            {x: w * 0.55, y: h}
-        ]
-    }
-}
-
-$(window).on('resize', function () {
-    morphingPaths(actualSection);
-}).resize();
