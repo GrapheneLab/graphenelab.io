@@ -241,7 +241,7 @@ section {
 .gl__logo-wrapper {
   display: block;
   height: 100%;
-  padding: 1rem; }
+  padding: 1.5rem; }
 .gl__logo {
   position: relative;
   z-index: 100;
