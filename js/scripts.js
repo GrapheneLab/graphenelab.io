@@ -49,7 +49,7 @@ $(document).ready(function () {
         })
     }
 
-    if($('#pieces')){
+    if($('#pieces').length > 0){
         $('.js-change-svg-bg').on('click', function(){ changeBg() });
 
         setInterval(function(){ changeBg() }, 5000);

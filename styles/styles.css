@@ -239,7 +239,9 @@ section {
     .gl__navbar .nav-link:hover:after {
       transform: scaleX(1); }
 .gl__logo-wrapper {
-  display: contents; }
+  display: block;
+  height: 100%;
+  padding: 1rem; }
 .gl__logo {
   position: relative;
   z-index: 100;
@@ -531,6 +533,8 @@ section {
 .intro__animate-bg {
   position: fixed;
   z-index: -100;
+  min-width: 100%;
+  min-height: 100%;
   -webkit-transform: translate3d(0, 0, 0); }
   .intro__animate-bg video {
     position: fixed;

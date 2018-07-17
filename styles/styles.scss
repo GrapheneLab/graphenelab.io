@@ -138,7 +138,9 @@ section {
   }
 
   &__logo-wrapper{
-    display: contents;
+    display: block;
+    height: 100%;
+    padding: 1rem;
   }
   &__logo {
     position: relative;
@@ -541,6 +543,8 @@ section {
 .intro__animate-bg{
   position: fixed;
   z-index: -100;
+  min-width: 100%;
+  min-height: 100%;
   -webkit-transform: translate3d(0,0,0);
   video{
     position: fixed;
