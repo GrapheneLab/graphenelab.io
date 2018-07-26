@@ -489,6 +489,7 @@ section {
 
   &__map-wrapper{
     padding: 0 3rem;
+    min-height: 400px;
     @media screen and (max-width: 1000px){
       display: none;
     }

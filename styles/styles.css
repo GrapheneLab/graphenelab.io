@@ -497,7 +497,8 @@ section {
 .gl__label {
   font-size: 1.4rem; }
 .gl__map-wrapper {
-  padding: 0 3rem; }
+  padding: 0 3rem;
+  min-height: 400px; }
   @media screen and (max-width: 1000px) {
     .gl__map-wrapper {
       display: none; } }

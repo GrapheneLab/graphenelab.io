@@ -258,6 +258,18 @@ var httpXMLRequest = function(object){
     var xhr = new XMLHttpRequest();
     var url = 'https://utils.graphenelab.io/send.php';
     var data = new FormData();
+    var resultText = {
+        ru: [
+            '<p class="text--lg">Спасибо за обращение!</p>',
+            '<p class="text--md">Благодарим Вас за обращение по данному вопросу. <br/> В ближайшее время с Вами свяжется один из наших сотрудников.</p>',
+            '<p class="text--md">Удачного дня!!</p>'
+        ],
+        en: [
+            '<p class="text--lg">Thank you for getting in touch!</p>',
+            '<p class="text--md">We appreciate you contacting us about the quote. <br/> One of our colleagues will get back to you shortly.</p>',
+            '<p class="text--md">Have a great day!!</p>'
+        ]
+    }
 
     for(var i in object){
         data.append(i, object[i]);
@@ -282,13 +294,15 @@ var httpXMLRequest = function(object){
             return;
         } else {
             var formDOM = document.getElementById('contactForm');
-            formDOM.innerHTML =
-                '<p class="text--lg">Thank you for getting in touch!</p>'
-                + '<p class="text--md">'
-                + 'We appreciate you contacting us about the quote. <br/>'
-                + 'One of our colleagues will get back to you shortly.'
-                + '</p>'
-                + '<p class="text--md">Have a great day!!</p>';
+            var locale = 'ru';
+
+            if(window.location.href.indexOf('en') > -1){
+                locale = 'en'
+            }
+
+            formDOM.innerHTML = resultText[locale].map(function (elem) {
+                return elem;
+            });
         }
 
     }
