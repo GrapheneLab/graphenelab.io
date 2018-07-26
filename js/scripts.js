@@ -185,3 +185,140 @@ $('.js-link-anchor').on('click', function () {
     var px = $($(this).attr('href')).offset().top;
     $('html, body').animate({scrollTop: px}, px === 0 ? 1000 : px / 10);
 });
+
+//form validation & submit
+
+var validateMail = function(mail){
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(mail).toLowerCase());
+};
+
+var validateName = function(mail){
+    var notNumbers = /^([^0-9]*)$/;
+    var notSymbols = /^[^`~!@#$%^&*()<>%$=+_,.[\]:;<>\\/|]*$/;
+
+    return notNumbers.test(String(mail).toLowerCase()) && notSymbols.test(String(mail).toLowerCase());
+};
+
+var validation = function(name, value){
+
+    var result = false;
+
+    switch(name){
+        case 'ct_email':
+            result = validateMail(value);
+            break;
+        case 'ct_name':
+            result = validateName(value);
+            break;
+        case 'ct_message':
+            result = value.length > 10;
+            break;
+        default:
+            result = true;
+    }
+
+    return result;
+};
+
+var validateField = function(field){
+
+    var name = field.id;
+    var value = field.value;
+    var valid =  validation(name, value);
+    var classesArr = ['field--valid', 'field--invalid'];
+
+    if(!valid){
+        classesArr.reverse();
+    }
+
+    field.classList.add(classesArr[0]);
+    field.classList.remove(classesArr[1]);
+
+    return valid;
+};
+
+var performValidation = function(event){
+    validateField(event.target);
+}
+
+var httpXMLRequest = function(object){
+
+    var btn = document.getElementById('formSubmit');
+
+    btn.innerHTML =
+        '<div class="form-loader">'
+            + '<span></span>'
+            + '<span></span>'
+            + '<span></span>'
+        + '</div>';
+
+    btn.disabled = true;
+
+    var xhr = new XMLHttpRequest();
+    var url = 'https://utils.graphenelab.io/send.php';
+    var data = new FormData();
+
+    for(var i in object){
+        data.append(i, object[i]);
+    }
+
+    xhr.open('POST', url, true);
+
+    xhr.send(data);
+
+    xhr.onreadystatechange = function() {
+        if (this.readyState != 4) return;
+
+        // по окончании запроса доступны:
+        // status, statusText
+        // responseText, responseXML (при content-type: text/xml)
+
+        if (this.status != 200) {
+            // обработать ошибку
+            console.log( 'Error: ' + (this.status ? this.statusText : 'request failed!') );
+            btn.innerHTML = 'Send';
+            btn.disabled = false;
+            return;
+        } else {
+            var formDOM = document.getElementById('contactForm');
+            formDOM.innerHTML =
+                '<p class="text--lg">Thank you for getting in touch!</p>'
+                + '<p class="text--md">'
+                + 'We appreciate you contacting us about the quote. <br/>'
+                + 'One of our colleagues will get back to you shortly.'
+                + '</p>'
+                + '<p class="text--md">Have a great day!!</p>';
+        }
+
+    }
+};
+
+
+$('#contactForm').on('submit', function (event) {
+    event.preventDefault();
+
+    var fields = Object.values(event.currentTarget).slice(0, event.currentTarget.length - 1);
+
+    var errors = false;
+    var object = {};
+
+    for(var i = 0; i < fields.length; i++){
+        var elem = fields[i];
+        var valide = validateField(elem, true);
+
+        if(!valide || !elem.value){
+            errors = true;
+            break;
+        }
+
+        object[elem.id] = elem.value;
+    }
+
+    if(!errors){
+        // console.log(object);
+        httpXMLRequest(object);
+        return;
+    }
+
+});

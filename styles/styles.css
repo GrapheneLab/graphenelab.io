@@ -792,4 +792,33 @@ b, strong {
 .blur {
   filter: blur(2px); }
 
+.field--valid {
+  border: 1px solid green; }
+.field--invalid {
+  border: 1px solid red; }
+
+.form-loader {
+  position: relative;
+  margin: 0 auto; }
+  .form-loader span {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: white;
+    margin: 0 2px;
+    opacity: 0; }
+    .form-loader span:nth-child(1) {
+      animation: opacitychange 1s ease-in-out infinite; }
+    .form-loader span:nth-child(2) {
+      animation: opacitychange 1s ease-in-out 0.33s infinite; }
+    .form-loader span:nth-child(3) {
+      animation: opacitychange 1s ease-in-out 0.66s infinite; }
+
+@keyframes opacitychange {
+  0%, 100% {
+    opacity: 0; }
+  60% {
+    opacity: 1; } }
+
 /*# sourceMappingURL=styles.css.map */
