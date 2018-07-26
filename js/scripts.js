@@ -296,13 +296,11 @@ var httpXMLRequest = function(object){
             var formDOM = document.getElementById('contactForm');
             var locale = 'ru';
 
-            if(window.location.href.indexOf('en') > -1){
+            if(window.location.pathname.indexOf('en') > -1){
                 locale = 'en'
             }
 
-            formDOM.innerHTML = resultText[locale].map(function (elem) {
-                return elem;
-            });
+            formDOM.innerHTML = resultText[locale].join('\n');
         }
 
     }
