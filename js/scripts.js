@@ -211,9 +211,9 @@ var validation = function(name, value){
         case 'ct_name':
             result = validateName(value);
             break;
-        case 'ct_message':
-            result = value.length > 10;
-            break;
+        // case 'ct_message':
+        //     result = value.length > 10;
+        //     break;
         default:
             result = true;
     }
