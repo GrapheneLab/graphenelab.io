@@ -240,7 +240,7 @@ var validateField = function(field){
 
 var performValidation = function(event){
     validateField(event.target);
-}
+};
 
 var httpXMLRequest = function(object){
 
