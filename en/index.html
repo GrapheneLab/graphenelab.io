@@ -665,32 +665,32 @@
         <h2 class="gl__heading">Our contacts</h2>
         <div class="row">
             <!-- Default form contact -->
-            <form class="col-lg-5 col-sm-8 form--vertical">
+            <form id="contactForm" class="col-lg-5 col-sm-8 form--vertical">
                 <p class="text--lg">Contact us</p>
 
                 <!-- Default input name -->
                 <label for="ct_name" class="gl__label">Your name</label>
-                <input type="text" id="ct_name" class="form-control gl__input">
+                <input type="text" id="ct_name" class="form-control gl__input" onchange="performValidation(event)">
 
                 <br>
 
                 <!-- Default input email -->
                 <label for="ct_email" class="gl__label">Your email</label>
-                <input type="email" id="ct_email" class="form-control gl__input">
+                <input type="email" id="ct_email" class="form-control gl__input" onchange="performValidation(event)">
 
                 <br>
 
                 <!-- Default input subject -->
                 <label for="ct_subject" class="gl__label">Subject</label>
-                <input type="text" id="ct_subject" class="form-control gl__input">
+                <input type="text" id="ct_subject" class="form-control gl__input" onchange="performValidation(event)">
 
                 <br>
 
                 <!-- Default textarea message -->
                 <label for="ct_message" class="gl__label">Message</label>
-                <textarea type="text" id="ct_message" class="form-control gl__input" rows="5"></textarea>
+                <textarea type="text" id="ct_message" class="form-control gl__input" onchange="performValidation(event)" rows="5"></textarea>
 
-                <button class="btn btn--lg btn--gl" type="submit">Send</button>
+                <button id="formSubmit" class="btn btn--lg btn--gl" type="submit">Send</button>
             </form>
             <!-- Default form contact -->
             <div class="col-md-7 gl__map-wrapper">
@@ -744,6 +744,7 @@
 <script type="text/javascript" src="../libs/MDB/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../libs/MDB/js/mdb.min.js"></script>
 <script type="text/javascript" src="../libs/owl/owl.carousel.min.js"></script>
+<script type="text/javascript" src="../js/scripts.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAadr-QWWetV2Sx6SMuxVIUdHISH-1YcxI"></script>
 
 <script type='text/javascript'>

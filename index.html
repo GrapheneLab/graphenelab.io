@@ -721,32 +721,32 @@
         <h2 class="gl__heading">Наши контакты</h2>
         <div class="row">
             <!-- Default form contact -->
-            <form class="col-lg-5 col-sm-8 form--vertical">
+            <form id="contactForm" class="col-lg-5 col-sm-8 form--vertical">
                 <p class="text--lg">Напишите нам</p>
 
                 <!-- Default input name -->
                 <label for="ct_name" class="gl__label">Ваше имя</label>
-                <input type="text" id="ct_name" class="form-control gl__input">
+                <input type="text" id="ct_name" class="form-control gl__input" onchange="performValidation(event)">
 
                 <br>
 
                 <!-- Default input email -->
                 <label for="ct_email" class="gl__label">Ваш email</label>
-                <input type="email" id="ct_email" class="form-control gl__input">
+                <input type="email" id="ct_email" class="form-control gl__input" onchange="performValidation(event)">
 
                 <br>
 
                 <!-- Default input subject -->
                 <label for="ct_subject" class="gl__label">Тема</label>
-                <input type="text" id="ct_subject" class="form-control gl__input">
+                <input type="text" id="ct_subject" class="form-control gl__input" onchange="performValidation(event)">
 
                 <br>
 
                 <!-- Default textarea message -->
                 <label for="ct_message" class="gl__label">Сообщение</label>
-                <textarea type="text" id="ct_message" class="form-control gl__input" rows="5"></textarea>
+                <textarea type="text" id="ct_message" class="form-control gl__input" onchange="performValidation(event)" rows="5"></textarea>
 
-                <button class="btn btn--lg btn--gl" type="submit">Отправить</button>
+                <button id="formSubmit" class="btn btn--lg btn--gl" type="submit">Отправить</button>
             </form>
             <!-- Default form contact -->
             <div class="col-md-7 gl__map-wrapper">
