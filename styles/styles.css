@@ -93,16 +93,8 @@ body {
   background-image: linear-gradient(-105deg, rgba(238, 67, 69, 0.9), #313647); }
   .services__tablink:not(:first-child) {
     margin-top: -70px; }
-  .services__tablink:after {
-    position: absolute;
-    top: -70px;
-    left: 0;
-    content: "";
-    width: 200%;
-    height: 200%;
-    background-image: linear-gradient(60deg, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 80%);
-    transform: translateX(-100%); }
   .services__tablink .nav-link {
+    position: relative;
     display: flex;
     align-items: flex-end;
     font-size: 1.2rem;
@@ -110,9 +102,18 @@ body {
     width: 100%;
     height: 100%;
     color: #ffffff; }
+    .services__tablink .nav-link:after {
+      position: absolute;
+      top: -70px;
+      left: 0;
+      content: "";
+      width: 200%;
+      height: 200%;
+      background-image: linear-gradient(60deg, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 80%);
+      transform: translateX(-100%); }
   .services__tablink:hover {
     transform: rotateX(30deg) rotateY(-15deg) rotate(30deg) translate(-25px, 50px); }
-    .services__tablink:hover:after {
+    .services__tablink:hover .nav-link:after {
       transform: translateX(100%);
       transition: all 1.2s ease-in-out; }
 
@@ -732,6 +733,9 @@ b, strong {
         width: 100%;
         margin: -10rem 0 0;
         padding: 12rem 2rem 6rem; } }
+    .product__info .text--lg {
+      text-transform: uppercase;
+      font-weight: bold; }
   .product__sources {
     position: absolute;
     bottom: 2rem;
