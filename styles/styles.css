@@ -256,6 +256,8 @@ section {
   line-height: 1.5;
   padding: 0.2rem 0;
   margin-bottom: 8rem; }
+  .gl__heading.subheading {
+    margin: 4rem 0; }
   .gl__heading:after {
     content: '';
     position: absolute;
